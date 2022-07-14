@@ -1,6 +1,6 @@
 import { API, graphqlOperation } from 'aws-amplify'
-import { getTodo, getTodoList } from '../../src/graphql/queries'
 import config from '../../src/aws-exports'
+import { getTodo, getTodoList } from '../../src/graphql/queries'
 
 API.configure(config)
 
@@ -21,9 +21,9 @@ export const getStaticPaths = async () => {
     console.log('Failed to fetch todos paths.', result.errors)
     throw new Error(result.errors[0].message)
   }
-  const paths = result.data.getTodoList.todos.items.map(({ id }) => ({
+  const paths = result.data.getTodoList ? result.data.getTodoList.todos.items.map(({ id }) => ({
     params: { id },
-  }))
+  })) : [] 
   return { paths, fallback: false }
 }
 
