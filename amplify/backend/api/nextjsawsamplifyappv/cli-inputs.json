@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "nextjsawsamplifyappv",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/moldkevi/work/next-js-testing-verification-projects/nextjs-aws-amplify-app-v12-ssg/amplify/backend/api/nextjsawsamplifyappv/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
