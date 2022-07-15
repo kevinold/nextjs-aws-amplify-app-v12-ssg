@@ -1,13 +1,11 @@
-import { useReducer } from 'react'
 import { API, graphqlOperation } from 'aws-amplify'
-import nanoid from 'nanoid'
 import produce from 'immer'
+import { nanoid } from 'nanoid'
+import { useReducer } from 'react'
 
 import config from '../src/aws-exports'
 import {
-  createTodo,
-  deleteTodo,
-  createTodoList,
+  createTodo, createTodoList, deleteTodo
 } from '../src/graphql/mutations'
 import { getTodoList } from '../src/graphql/queries'
 
